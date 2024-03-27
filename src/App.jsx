@@ -1,17 +1,47 @@
-import intro_video from './assets/intro-video.mp4';
 import card_img from './assets/card-img.png';
 
 import './App.scss';
+import { useEffect } from 'react';
 
 function App() {
 
+  useEffect(() => {
+
+    const snowContainer = document.querySelector('.snow_container');
+
+    // params
+    const snowFlakes = 150;
+    const snowFlakesSpeed = 1;
+    const snowFlakesOpacity = 0.5;
+
+    for (let i = 0; i < snowFlakes; i++) {
+      const snowFlake = document.createElement('div');
+      snowFlake.classList.add('snow_flake');
+      snowFlake.style.opacity = Math.random() * snowFlakesOpacity;
+      snowFlake.style.left = Math.random() * 100 + 'vw';
+      snowFlake.style.animationDuration = Math.random() * snowFlakesSpeed + 10 + 's';
+      snowFlake.style.animationDelay = Math.random() * 10 + 's';
+
+      const randomNum = Math.random() * 1.5 + 0.5;
+      snowFlake.style.scale = randomNum;
+      snowFlake.style.filter = `blur(${randomNum}px)`;
+
+      snowContainer.appendChild(snowFlake);
+    }
+
+  }, []);
+
   return (
     <>
-      <div className="video_container">
-        <video autoPlay muted loop>
-          <source src={intro_video} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      <div className="snow_container"></div>
+      <div className="banner_container">
+
+        <div>
+          <p>Analice</p>
+          <p>3 Anos</p>
+        </div>
+
+        <img src="banner.jpeg" alt="" />
       </div>
 
       <div className="texts">
@@ -29,6 +59,8 @@ function App() {
             <img src={card_img} alt="" />
           </div>
 
+          <p>Dia 27/04 | 18:30h</p>
+
           <hr />
 
         </div>
@@ -38,11 +70,18 @@ function App() {
         </h5>
 
         <p>
-          Os ventos do Norte trazem a notícia de que o terceiro aniversário da princesa Analice será comemorado com alegria e magia, onde risadas e diversão derreterão até o coração mais gelado.
+          Os ventos do Norte trazem a notícia de que o terceiro aniversário da princesa Analice será comemorado com alegria e magia, onde risadas e diversão derreterão até o coração mais gelado
 
         </p>
 
       </div >
+
+      <div className="btns">
+
+        <button>Confirmar Presença</button>
+        <button>Ver localização</button>
+
+      </div>
     </>
   );
 }
