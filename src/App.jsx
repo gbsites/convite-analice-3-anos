@@ -6,7 +6,6 @@ import { useEffect } from 'react';
 function App() {
 
   useEffect(() => {
-
     const snowContainer = document.querySelector('.snow_container');
 
     // params
@@ -41,7 +40,7 @@ function App() {
           <p>3 Anos</p>
         </div>
 
-        <img src="banner.jpeg" alt="" />
+        <img src="bg.jpg" alt="" />
       </div>
 
       <div className="texts">
@@ -78,8 +77,9 @@ function App() {
 
       <div className="btns">
 
-        <button>Confirmar Presença</button>
-        <button>Ver localização</button>
+        <button onClick={() => window.location.href = "https://api.whatsapp.com/send?phone=5521990072664&text=Estou%20a%20caminho%20do%20Reino!"}>Confirmar Presença</button>
+
+        <button onClick={() => window.location.href = "https://maps.app.goo.gl/dLXyBk1bwsqXbjLZ9"}>Ver Localização</button>
 
       </div>
     </>
