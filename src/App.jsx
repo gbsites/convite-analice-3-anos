@@ -79,7 +79,7 @@ function App() {
 
         <button onClick={() => window.location.href = "https://api.whatsapp.com/send?phone=5521990072664&text=Estou%20a%20caminho%20do%20Reino!"}>Confirmar Presença</button>
 
-        <button onClick={() => window.location.href = "https://maps.app.goo.gl/dLXyBk1bwsqXbjLZ9"}>Ver Localização</button>
+        <button onClick={() => window.location.href = "https://maps.app.goo.gl/6UZxqbW3kHAPPmdQ6"}>Ver Localização</button>
 
       </div>
     </>
