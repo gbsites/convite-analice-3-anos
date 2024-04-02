@@ -129,9 +129,13 @@ body {
                 overflow: hidden;
 
                 width: 70%;
+                height: 330px;
                 border-radius: 30px;
 
                 img {
+                    object-fit: cover;
+                    object-position: bottom;
+
                     width: 100%;
                     transition-duration: .3s;
                 }

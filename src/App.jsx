@@ -1,4 +1,4 @@
-import card_img from './assets/card-img.png';
+import card_img from '/ana.jpg';
 
 import './App.scss';
 import { useEffect } from 'react';
